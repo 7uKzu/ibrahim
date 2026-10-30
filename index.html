@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Happy Birthday, Ibrahim 👽🎉</title>
+  <meta name="description" content="Not from this planet. A birthday site for Ibrahim (Ibbi), 30 October.">
+  <meta name="theme-color" content="#05060f">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://7uKzu.github.io/ibrahim/">
+  <meta property="og:title" content="Happy Birthday, Ibrahim 🎉">
+  <meta property="og:description" content="Not from this planet. Tap in for the evidence, the sequel, and the cake.">
+  <meta property="og:image" content="https://7uKzu.github.io/ibrahim/assets/photo-flex.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="675">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Ibrahim grinning and flexing both arms">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Happy Birthday, Ibrahim 🎉">
+  <meta name="twitter:image" content="https://7uKzu.github.io/ibrahim/assets/photo-flex.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👽%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Mono:wght@400;700&family=Unbounded:wght@300;600;800;900&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div id="alien-rain" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- 1. Hero -->
+  <header class="hero" id="top">
+    <p class="eyebrow">Incoming transmission · 30.10</p>
+    <h1 id="hero-title" class="hero-title">
+      <span class="hb">Happy Birthday,</span>
+      <span class="name">Ibrahim</span>
+    </h1>
+    <p class="aka">aka <strong>Ibbi</strong> 👽</p>
+
+    <div class="status">
+      <div id="today" class="today-wrap" hidden>
+        <p class="today">IT'S TODAY 🎉</p>
+        <p class="today-sub">Another lap around the sun, officially complete.</p>
+      </div>
+      <div id="countdown" class="countdown" hidden>
+        <p class="cd-label">Landing on Earth in</p>
+        <div class="cd-grid" role="timer" aria-live="off">
+          <div><span id="cd-d">0</span><small>days</small></div>
+          <div><span id="cd-h">00</span><small>hrs</small></div>
+          <div><span id="cd-m">00</span><small>min</small></div>
+          <div><span id="cd-s">00</span><small>sec</small></div>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#exhibits">Scroll for the evidence ↓</a>
+  </header>
+
+  <main>
+    <!-- 2. Exhibits -->
+    <section id="exhibits" class="exhibits">
+      <h2 class="section-title reveal"><span class="kicker">Case file #30-10</span>The Evidence</h2>
+      <p class="lede reveal">Two photos. Same man. Zero explanation.</p>
+
+      <div class="polaroids">
+        <figure class="polaroid tilt-l reveal">
+          <span class="tape" aria-hidden="true"></span>
+          <button class="polaroid-btn" type="button" data-full="assets/photo-flex" data-caption="Exhibit A: The Flex" style="--pos: 50% 38%" aria-label="Enlarge Exhibit A, The Flex">
+            <span class="exhibit-tag">Exhibit A</span>
+            <picture>
+              <source srcset="assets/photo-flex.webp" type="image/webp">
+              <img src="assets/photo-flex.jpg" width="675" height="1200" loading="lazy" decoding="async"
+                   alt="Ibrahim grinning and flexing both arms in a black jacket, next to an Emergency Help booth">
+            </picture>
+          </button>
+          <figcaption>
+            <strong>The Flex</strong>
+            <span>Flexing so hard they built an EMERGENCY HELP booth next to him.</span>
+          </figcaption>
+        </figure>
+
+        <p class="vs reveal" aria-hidden="true">VS</p>
+
+        <figure class="polaroid tilt-r reveal">
+          <span class="tape" aria-hidden="true"></span>
+          <button class="polaroid-btn" type="button" data-full="assets/photo-selfie" data-caption="Exhibit B: When someone says 'quick question'" style="--pos: 50% 62%" aria-label="Enlarge Exhibit B, the serious selfie">
+            <span class="exhibit-tag">Exhibit B</span>
+            <picture>
+              <source srcset="assets/photo-selfie.webp" type="image/webp">
+              <img src="assets/photo-selfie.jpg" width="675" height="1200" loading="lazy" decoding="async"
+                   alt="Ibrahim's very serious indoor selfie in front of grey curtains">
+            </picture>
+          </button>
+          <figcaption>
+            <strong>When someone says “quick question”</strong>
+            <span>Bro is processing. Please hold.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="hint reveal">Tap a photo to enlarge</p>
+    </section>
+
+    <!-- 3. The Duo -->
+    <section id="duo" class="duo" aria-labelledby="duo-title">
+      <p class="presents reveal">An Arsalan × Ibbi production</p>
+      <div class="duo-frame">
+        <picture>
+          <source srcset="assets/photo-duo.webp" type="image/webp">
+          <img class="duo-img" src="assets/photo-duo.jpg" width="663" height="1200" loading="lazy" decoding="async"
+               alt="Black-and-white portrait of Ahmad (left, black shalwar kameez) and Ibrahim (right, white shalwar kameez) on a hilltop under dramatic clouds">
+        </picture>
+        <div class="grain" aria-hidden="true"></div>
+        <div class="poster-text">
+          <h2 id="duo-title" class="poster-title">Ibrahim <span class="amp">&amp;</span> Ahmad<span class="sub">The Sequel</span></h2>
+          <p class="tagline">Two legends. One birthday.</p>
+        </div>
+      </div>
+      <div class="billing reveal">
+        <p class="credits">Starring <b>Ibbi</b> · <b>Ahmad</b> · <b>Dramatic Clouds</b><br>
+          Wardrobe by the Shalwar Kameez Department<br>
+          Footwear by Peshawari Chappal<br>
+          Filmed on location, somewhere on a hill</p>
+        <p class="release">In cinemas 30 October</p>
+      </div>
+    </section>
+
+    <!-- 4. Alien Era -->
+    <section id="alien" class="alien">
+      <div class="drifters" aria-hidden="true"></div>
+      <h2 class="section-title neon reveal"><span class="kicker">Classified footage</span>Alien Era</h2>
+      <p class="lede reveal">Scientists confirm: not from this planet.</p>
+      <div class="phone reveal">
+        <span class="notch" aria-hidden="true"></span>
+        <video id="alien-video" src="assets/alien.mp4" poster="assets/alien-poster.jpg"
+               autoplay muted loop playsinline preload="metadata"
+               aria-label="Ibrahim with a green alien face filter, flicking his curly hair and giving a thumbs up"></video>
+        <button id="unmute" class="unmute" type="button" aria-pressed="false">🔊 Tap to unmute</button>
+      </div>
+      <p class="fineprint reveal">Footage unedited. Hair flick 100% natural.</p>
+    </section>
+
+    <!-- 5. Messages -->
+    <section id="wishes" class="wishes">
+      <h2 class="section-title reveal"><span class="kicker">Messages received</span>Transmissions from Earth</h2>
+      <div id="messages" class="messages"></div>
+    </section>
+
+    <!-- 6. Cake -->
+    <section id="cake" class="cake-section">
+      <h2 class="section-title gold reveal"><span class="kicker">Final mission</span>Make a wish</h2>
+      <p class="lede reveal">Tap each candle to blow it out.</p>
+
+      <div class="cake" id="cake-el">
+        <div class="candles">
+          <button class="candle" type="button" aria-label="Blow out candle 1" aria-pressed="false"><span class="flame"></span><span class="smoke"></span><span class="wax"></span></button>
+          <button class="candle" type="button" aria-label="Blow out candle 2" aria-pressed="false"><span class="flame"></span><span class="smoke"></span><span class="wax"></span></button>
+          <button class="candle" type="button" aria-label="Blow out candle 3" aria-pressed="false"><span class="flame"></span><span class="smoke"></span><span class="wax"></span></button>
+          <button class="candle" type="button" aria-label="Blow out candle 4" aria-pressed="false"><span class="flame"></span><span class="smoke"></span><span class="wax"></span></button>
+          <button class="candle" type="button" aria-label="Blow out candle 5" aria-pressed="false"><span class="flame"></span><span class="smoke"></span><span class="wax"></span></button>
+        </div>
+        <div class="tier tier-3"></div>
+        <div class="tier tier-2"></div>
+        <div class="tier tier-1"></div>
+        <div class="plate"></div>
+      </div>
+      <p id="candle-count" class="candle-count" aria-live="polite">5 candles left</p>
+
+      <div id="wish-card" class="wish-card" hidden>
+        <h3 id="wish-title"></h3>
+        <div id="wish-body"></div>
+        <p id="wish-sign" class="sign"></p>
+        <button id="relight" class="btn" type="button">Light them again 🕯️</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Footer -->
+  <footer class="site-footer">
+    <p>Made with ❤️ by <span data-from-name>Ahmad Arsalan</span></p>
+    <a href="#top" class="to-top">Back to orbit ↑</a>
+  </footer>
+
+  <button id="music" class="music" type="button" hidden aria-pressed="false" aria-label="Play music">🎵</button>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Enlarged photo">
+    <button class="lb-close" type="button" aria-label="Close">✕</button>
+    <picture>
+      <source id="lb-src" type="image/webp">
+      <img id="lb-img" alt="">
+    </picture>
+    <p id="lb-cap" class="lb-cap"></p>
+  </dialog>
+
+  <script src="messages.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
