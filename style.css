@@ -705,6 +705,22 @@ section { position: relative; padding: 80px var(--gutter); }
 }
 .rain-drop.calm { top: var(--y); animation: fade 2.4s ease var(--delay) forwards; opacity: 0; }
 
+/* ===== Expired ===== */
+.ended header, .ended main, .ended footer, .ended .music, .ended .toast, .ended dialog { display: none !important; }
+.ended-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px var(--gutter);
+  text-align: center;
+}
+.ended-screen .ended-emoji { margin: 0; font-size: 3.5rem; }
+.ended-screen h1 { margin: 0.4em 0; font-family: var(--f-display); font-weight: 800; font-size: clamp(1.8rem, 8vw, 3rem); color: var(--green); text-shadow: 0 0 24px rgba(57, 255, 136, 0.5); }
+.ended-screen p { color: var(--muted); }
+
 /* ===== Desktop ===== */
 @media (min-width: 760px) {
   section { padding: 110px 32px; }

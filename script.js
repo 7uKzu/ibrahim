@@ -12,6 +12,8 @@ const CONFIG = {
     'Have an amazing day.',
   ],
   CAKE_SIGNOFF: '— Ahmad Arsalan',
+  // The site closes itself at this moment (visitor's local time). Set to null to keep it up forever.
+  LIVE_UNTIL: '2026-10-31T00:00:00',
 };
 
 (function () {
@@ -21,6 +23,25 @@ const CONFIG = {
   const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
   const rand = (a, b) => a + Math.random() * (b - a);
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ?now=2026-10-25T12:00 pretends it's that moment (handy for testing)
+  const param = new URLSearchParams(location.search).get('now');
+  const fake = param ? new Date(param) : null;
+  const offset = fake && !isNaN(fake) ? fake.getTime() - Date.now() : 0;
+  const now = () => new Date(Date.now() + offset);
+
+  /* ---------- Site expiry ---------- */
+  if (CONFIG.LIVE_UNTIL && now() >= new Date(CONFIG.LIVE_UNTIL)) {
+    document.body.classList.add('ended');
+    $('#ended').hidden = false;
+    $('#stars').style.display = 'none';
+    return;
+  }
+  if (CONFIG.LIVE_UNTIL) {
+    // Close the page if it's still open when the time comes
+    const ms = new Date(CONFIG.LIVE_UNTIL) - now();
+    if (ms < 2147483647) setTimeout(() => location.reload(), ms + 500);
+  }
 
   /* ---------- Starfield ---------- */
   (function stars() {
@@ -159,12 +180,6 @@ const CONFIG = {
 
   /* ---------- Countdown / "It's today" ---------- */
   (function countdown() {
-    // ?now=2026-10-25T12:00 pretends it's that moment (handy for testing)
-    const param = new URLSearchParams(location.search).get('now');
-    const fake = param ? new Date(param) : null;
-    const offset = fake && !isNaN(fake) ? fake.getTime() - Date.now() : 0;
-    const now = () => new Date(Date.now() + offset);
-
     const M = CONFIG.BIRTHDAY_MONTH - 1, D = CONFIG.BIRTHDAY_DAY;
     const todayEl = $('#today'), cdEl = $('#countdown');
     const out = { d: $('#cd-d'), h: $('#cd-h'), m: $('#cd-m'), s: $('#cd-s') };
